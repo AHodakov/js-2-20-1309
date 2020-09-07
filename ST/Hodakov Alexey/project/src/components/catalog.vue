@@ -6,9 +6,10 @@
 
 <script>
 import item from "./items/item.vue";
+import {get} from "../utils/requests.js"
 
 export default {
-  components: { item: item },
+  components: { item },
   data() {
     return {
       items: [],
@@ -17,9 +18,7 @@ export default {
     };
   },
   methods: {
-    get(url) {
-      return fetch(url).then((d) => d.json());
-    },
+   
     // find(item) {
     //   return this.basketItems.find((el) => el.productId == item.productId);
     // },
@@ -32,7 +31,7 @@ export default {
     // },
   },
   mounted() {
-    this.get(this.url).then((item) => {
+    get(this.url).then((item) => {
       this.items = item;
     });
   },
