@@ -13,22 +13,10 @@ export default {
   data() {
     return {
       items: [],
-      url:
-        "https://raw.githubusercontent.com/kellolo/static/master/JSON/catalog.json",
+      url: "/api/catalog"
     };
   },
   methods: {
-   
-    // find(item) {
-    //   return this.basketItems.find((el) => el.productId == item.productId);
-    // },
-    // addBasketItem(item) {
-    //   if (this.find(item)) {
-    //     this.find(item).amount++;
-    //   } else {
-    //     this.basketItems.push(Object.assign({}, item, { amount: 1 }));
-    //   }
-    // },
   },
   mounted() {
     get(this.url).then((item) => {

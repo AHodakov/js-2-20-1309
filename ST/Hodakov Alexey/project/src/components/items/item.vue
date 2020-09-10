@@ -63,11 +63,6 @@ export default {
       default: "catalog",
     },
   },
-  methods: {
-    test() {
-      console.log(this);
-    },
-  },
 };
 </script>
 
